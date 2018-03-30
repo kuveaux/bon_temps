@@ -8,12 +8,13 @@ from flask import (
     jsonify,
     request,
     redirect)
+from config import password
 
 # flask setup
 app = Flask(__name__)
 # database setup
 Base = automap_base()
-engine = create_engine()
+engine = create_engine(f"postgresql+psycopg2://akufoy:{password}@rds-postgresql-bon-temps.capxvife87l2.us-east-2.rds.amazonaws.com:5432/bon_temps")
 Base.prepare(engine, reflect=True)
 Events = Base.classes.events
 session = Session(engine)
@@ -24,9 +25,9 @@ def home():
     return render_template("index.html")
 
 # route - leaflet
-@app.route("/api/leaflet")
-def events_geo_data():
-    # PostGRES r
+@app.route("/api/leaflet_data")
+def leaflet_data():
+    
     return 
 
 if __name__ == "__main__":
