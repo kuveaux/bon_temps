@@ -1,10 +1,24 @@
-h1 {
+.jumbotron {
     text-align: center;
+}
+.section-header {
+    text-align: center;
+}
+#events-map-area {
+    height: 70vh;
+    background-color: goldenrod
+}
+#venue-area {
+    height: 70vh;
+    background-color: maroon;
+}
+#events-area {
+    height: 70vh;
+    background-color: purple
 }
 
 #map {
     display: block;
-    margin: auto;
-    width: 80vh;
-    height: 75vh;
+    width: 47vh;
+    height: 60vh;
 }

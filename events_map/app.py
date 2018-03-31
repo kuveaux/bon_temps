@@ -30,14 +30,14 @@ def home():
 def leaflet_data():
     results = session.query(bon_temps.venues, bon_temps.address, bon_temps.lat, bon_temps.lon).all()
     # massage into json
-    bon_temps_data = []
+    bon_temps_data = {"results": []}
     for result in results:
-        venues = {}
-        venues["venue"] = result[0]
-        venues["address"] = result[1]
-        venues["lat"] = result[2]
-        venues["lon"] = result[3]
-        bon_temps_data.append(venues)
+        bon_temps_data["results"].append({
+        "venue": result[0],
+        "address": result[1],
+        "lat": result[2],
+        "lon": result[3]
+        })
 
     return jsonify(bon_temps_data)
 

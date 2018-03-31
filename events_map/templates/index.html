@@ -25,14 +25,27 @@
 </head>
 
 <body>
-    <h1>Austin Events Map</h1>
-    <div id="map"></div>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Austin Events Map</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div id="events-map-area"class="section-header col-md-4">
+                <h1>Events Map</h1>
+                <div id="map"></div>
+            </div>
+            <div id="venue-area"class="section-header col-md-4">
+                <h1>Venue</h1>
+            </div>
+            <div id="events-area"class="section-header col-md-4">
+                <h1>Event Information</h1>
+            </div>
+        </div>
+    </div>
     <table>
         <thead>
-            <th>Venue</th>
-            <th>Address</th>
-            <th>Lat</th>
-            <th>Lon</th>
         </thead>
         <tbody id="test"></tbody>
     </table>
