@@ -32,15 +32,36 @@
     </div>
     <div class="container">
         <div class="row">
-            <div id="events-map-area"class="section-header col-md-4">
+            <div id="events-map-area" class="section-header col-md-4">
                 <h1>Events Map</h1>
                 <div id="map"></div>
             </div>
-            <div id="venue-area"class="section-header col-md-4">
+            <div id="venue-area" class="section-header col-md-4">
                 <h1>Venue</h1>
+                <img class="img-responsive" src="{{ url_for('static', filename='images/cheer_up_charlies_photo.jpg') }}" alt="cheer-up-charlies">
+                <ul class="list-group ">
+                    <li class="list-group-item justify-content-between">
+                        Metallica with Alice Cooper
+                        <span class="badge badge-default badge-pill">8:00 PM</span>
+                    </li>
+                    <li class="list-group-item justify-content-between">
+                        Billy Bob and the Rangers ft. Adele
+                        <span class="badge badge-default badge-pill">9:00 PM</span>
+                    </li>
+                    <li class="list-group-item justify-content-between">
+                        Lenny Kravitz and Justin Beiber
+                        <span class="badge badge-default badge-pill">10:30 PM</span>
+                    </li>
+                    <li class="list-group-item justify-content-between">
+                        Kanye West
+                        <span class="badge badge-default badge-pill">midnight</span>
+                    </li>
+                </ul>
             </div>
-            <div id="events-area"class="section-header col-md-4">
+            <div id="events-area" class="section-header col-md-4">
                 <h1>Event Information</h1>
+                <div class="venue-photo-container">
+                </div>
             </div>
         </div>
     </div>

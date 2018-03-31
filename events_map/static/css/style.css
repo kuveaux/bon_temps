@@ -16,7 +16,9 @@
     height: 70vh;
     background-color: purple
 }
-
+.list-group {
+    margin-top: 25px;
+}
 #map {
     display: block;
     width: 47vh;
