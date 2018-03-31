@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Bon Temps</title>
 
     <!-- d3 -->
-    <script src="{{ url_for('static', filename='js/d3.min.js') }}"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
 
     <!-- bootstrap stylesheets and js -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -20,13 +20,22 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
 
+    <!-- my stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
-    <div id="map_area"></div>
-
-
-    
+    <h1>Austin Events Map</h1>
+    <div id="map"></div>
+    <table>
+        <thead>
+            <th>Venue</th>
+            <th>Address</th>
+            <th>Lat</th>
+            <th>Lon</th>
+        </thead>
+        <tbody id="test"></tbody>
+    </table>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- app.js script -->

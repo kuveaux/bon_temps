@@ -1,0 +1,10 @@
+h1 {
+    text-align: center;
+}
+
+#map {
+    display: block;
+    margin: auto;
+    width: 80vh;
+    height: 75vh;
+}
