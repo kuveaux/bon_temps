@@ -25,19 +25,16 @@
 </head>
 
 <body>
+    <div id="map"></div>
     <div class="container">
-        <div class="jumbotron">
+        <div class="site-title">
             <h1>Austin Events Map</h1>
         </div>
     </div>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div id="events-map-area" class="section-header col-md-4">
-                <h1>Events Map</h1>
-                <div id="map"></div>
-            </div>
-            <div id="venue-area" class="section-header col-md-4">
-                <h1>Venue</h1>
+            <div id="venue-area" class="section-header col-lg-3 col-md-3 col-sm-3 col-xs-3 col-lg-offset-6 col-md-offset-6 col-sm-offset-6 col-xs-offset-6">
+                <h2>Venue</h2>
                 <img class="img-responsive" src="{{ url_for('static', filename='images/cheer_up_charlies_photo.jpg') }}" alt="cheer-up-charlies">
                 <ul class="list-group ">
                     <li class="list-group-item justify-content-between">
@@ -58,8 +55,8 @@
                     </li>
                 </ul>
             </div>
-            <div id="events-area" class="section-header col-md-4">
-                <h1>Event Information</h1>
+            <div id="events-area" class="section-header col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <h2>Local Events</h2>
                 <div class="venue-photo-container">
                 </div>
             </div>

@@ -19,7 +19,7 @@ d3.json(bon_link).then(function(data){
 // 
 // create map object
 var myMap = L.map("map", {
-    center: [30.26, -97.74],
+    center: [30.26, -97.69],
     zoom: 13
 });
 
