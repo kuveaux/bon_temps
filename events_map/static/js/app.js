@@ -1,5 +1,5 @@
 // chart to see if database connection works
-var bon_link = "/api/leaflet_data";
+var bon_link = "/api/daily_events";
 
 d3.json(bon_link).then(function(data){
     for (i=0;i<data["results"].length;i++) {
