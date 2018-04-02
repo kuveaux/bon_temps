@@ -12,6 +12,9 @@ body {
 .section-header {
     text-align: center;
 }
+.events-list-header {
+    text-align: center;
+}
 #events-map-area {
     height: 70vh;
 }
@@ -20,6 +23,15 @@ body {
 }
 #events-area {
     height: 70vh;
+}
+#events-list-area {
+    height: 80vh;
+    background-color: #FC2222;
+}
+.container-fluid {
+    margin-left: 12vh;
+    margin-right: 7vh;
+    height: 90%;
 }
 .list-group {
     margin-top: 10px;
@@ -32,6 +44,7 @@ body {
 }
 .container {
     z-index: 1;
+    height: 10%;
     position: relative;
 
 }
