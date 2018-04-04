@@ -13,11 +13,10 @@ var bon_link = "/api/daily_events";
 
 // generate markers in leaflet 
 d3.json(bon_link).then(function (data) {
+    var markersList = []
     for (i = 0; i < data["results"].length; i++) {
         result = data["results"][i]
-        var eventLink = d3.select(".events-list").append("div")
-        .attr("class", "list-group-item justify-content-between")
-        .text(result.event)
+
         var customPopup = `<strong>${result.venue}</strong><br>${result.address}`
         // <li class="list-group-item justify-content-between">${result.event}<br><span class="badge badge-default badge-pill">8:00 PM</span></li>
         var customOptions = {
@@ -30,7 +29,31 @@ d3.json(bon_link).then(function (data) {
         newMarker.event = `${result.event}`
         newMarker.addTo(myMap).on('click', onClick)
 
-        
+        markersList[newMarker._leaflet_id] = newMarker
+
+        var eventLink = d3.select(".events-list").append("div")
+            .attr("class", "events-list-group-item list-group-item justify-content-between")
+            .attr("id", `${newMarker._leaflet_id}`)
+            .text(result.event)
+        $(".events-list-group-item").on("mouseover", function (event) {
+            $('.events-list-group-item').removeClass('active');
+            $(this).addClass('active');
+            markersList[$(this).attr('id')].openPopup();
+            d3.selectAll(".auto-generate").remove()
+            // use d3. to populate venue-area with marker info on click
+            var venueList = d3.select(".venue-list")
+                .append("li")
+                .attr("class", "auto-generate list-group-item justify-content-between")
+                .text($(this).text())
+                .append("span")
+                .attr("class", "badge badge-default badge-pill")
+                .text("8:00 PM")
+            console.log($(this).attr('id'));
+        });
+        // eventLink.on('click', eventClick);
+        // function eventClick(e){
+        //     console.log(eventLink.id)
+        // }
         // add onClick function to update venue window with clicked venues information
         function onClick(e) {
             // delete old entry
@@ -44,15 +67,16 @@ d3.json(bon_link).then(function (data) {
                 .attr("class", "badge badge-default badge-pill")
                 .text("8:00 PM")
 
-            console.log(e.target.venueName)
+            console.log(e)
             // alert(this.getLatLng());
         }
     }
+    console.log(markersList)
 });
 
 // create map object
 var myMap = L.map("map", {
-    center: [30.28, -97.735],
+    center: [30.27, -97.75],
     zoom: 13
 });
 

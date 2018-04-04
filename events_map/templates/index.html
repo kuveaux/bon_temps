@@ -9,10 +9,8 @@
 
     <!-- d3 -->
     <script src="https://d3js.org/d3.v5.min.js"></script>
-
-    <!-- bootstrap stylesheets and js -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri|IBM+Plex+Mono|Karla" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
 
@@ -28,28 +26,28 @@
     <div id="map"></div>
     <div class="container">
         <div class="row">
-            <div class="site-title">
+            <div class="site-title img-rounded">
                 <h1>Austin Events Map</h1>
             </div>
         </div>
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div id="events-list-area" class="events-list-header col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <div id="events-list-area" class="events-list-header col-lg-3 col-md-3 col-sm-3 col-xs-3 img-rounded">
                 <h2>Events List</h2>
                 <div class="events-list list-group scrolly">
                 </div>
             </div>
-            <div id="venue-area" class="section-header col-lg-2 col-md-2 col-sm-2 col-xs-2 col-lg-offset-5 col-md-offset-5 col-sm-offset-5 col-xs-offset-5">
+            <div id="venue-area" class="section-header col-lg-2 col-md-2 col-sm-2 col-xs-2 col-lg-offset-6 col-md-offset-6 col-sm-offset-6 col-xs-offset-6 img-rounded">
                 <h2>Venue</h2>
                 <img class="img-responsive" src="{{ url_for('static', filename='images/cheer_up_charlies_photo.jpg') }}" alt="cheer-up-charlies">
                 <ul class="venue-list list-group">
                 </ul>
             </div>
-            <div id="events-area" class="section-header col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                <h2>Local Shops</h2>
+            <div id="events-area" class="section-header col-lg-1 col-md-1 col-sm-1 col-xs-">
+                <!-- <h2>Local Shops</h2>
                 <div class="venue-photo-container">
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
