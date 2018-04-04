@@ -7,7 +7,10 @@ body {
 }
 
 .site-title {
+    margin: auto;
     text-align: center;
+    width: 50vh;
+    background-color: #C78D05;
 }
 .section-header {
     text-align: center;
@@ -19,14 +22,20 @@ body {
     height: 70vh;
 }
 #venue-area {
-    height: 70vh;
+    height: auto;
+    background-color: #C78D05;
 }
 #events-area {
     height: 70vh;
 }
 #events-list-area {
     height: 80vh;
-    background-color: #FC2222;
+    background-color: #C78D05;
+    
+}
+.events-list {
+    overflow-y: scroll;
+    height: 70vh;
 }
 .container-fluid {
     margin-left: 12vh;

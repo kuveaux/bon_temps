@@ -15,7 +15,7 @@ var bon_link = "/api/daily_events";
 d3.json(bon_link).then(function (data) {
     for (i = 0; i < data["results"].length; i++) {
         result = data["results"][i]
-        var eventLink = d3.select(".events-list").append("li")
+        var eventLink = d3.select(".events-list").append("div")
         .attr("class", "list-group-item justify-content-between")
         .text(result.event)
         var customPopup = `<strong>${result.venue}</strong><br>${result.address}`
