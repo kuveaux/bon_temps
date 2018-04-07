@@ -7,7 +7,6 @@ from flask import (
     jsonify,
     request,
     redirect)
-from config import password
 
 # flask setup
 app = Flask(__name__)
