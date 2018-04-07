@@ -11,6 +11,7 @@
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri|IBM+Plex+Mono|Karla" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
 
@@ -38,20 +39,39 @@
                 <div class="events-list list-group scrolly">
                 </div>
             </div>
-            <div id="venue-area" class="section-header col-lg-2 col-md-2 col-sm-2 col-xs-2 col-lg-offset-6 col-md-offset-6 col-sm-offset-6 col-xs-offset-6 img-rounded">
+            <div id="venue-area" class="section-header col-lg-2 col-md-2 col-sm-2 col-xs-2 col-lg-offset-7 col-md-offset-7 col-sm-offset-7 col-xs-offset-7 img-rounded">
                 <h2>Venue</h2>
                 <img class="img-responsive" src="{{ url_for('static', filename='images/cheer_up_charlies_photo.jpg') }}" alt="cheer-up-charlies">
                 <ul class="venue-list list-group">
                 </ul>
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Explore Music</button>
             </div>
-            <div id="events-area" class="section-header col-lg-1 col-md-1 col-sm-1 col-xs-">
-                <!-- <h2>Local Shops</h2>
+            <!-- <div id="events-area" class="section-header col-lg-1 col-md-1 col-sm-1 col-xs-">
+                <h2>Local Shops</h2>
                 <div class="venue-photo-container">
-                </div> -->
-            </div>
+                </div>
+            </div> -->
         </div>
     </div>
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
 
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Some text in the modal.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- app.js script -->

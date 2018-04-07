@@ -11,6 +11,7 @@ var bon_link = "/api/daily_events";
 //     }
 // });
 
+
 // generate markers in leaflet 
 d3.json(bon_link).then(function (data) {
     var markersList = []
@@ -67,18 +68,23 @@ d3.json(bon_link).then(function (data) {
                 .attr("class", "badge badge-default badge-pill")
                 .text("8:00 PM")
 
-            console.log(e)
             // alert(this.getLatLng());
         }
     }
     console.log(markersList)
 });
 
+
 // create map object
 var myMap = L.map("map", {
     center: [30.27, -97.75],
+    zoomControl: false,
     zoom: 13
 });
+
+L.control.zoom({
+    position: 'topleft'
+}).addTo(myMap);
 
 // add tile layer
 var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
