@@ -14,7 +14,7 @@ app = Flask(__name__)
 # database setup
 Base = automap_base()
 
-engine = create_engine(f"postgresql+psycopg2://akufoy:{password}@rds-postgresql-bon-temps.capxvife87l2.us-east-2.rds.amazonaws.com/bon_temps")
+engine = create_engine(f"postgresql+psycopg2://akufoy:Boodha1!!@rds-postgresql-bon-temps.capxvife87l2.us-east-2.rds.amazonaws.com/bon_temps")
 Base.prepare(engine, reflect=True)
 bon_temps = Base.classes.bon_temps
 daily_events = Base.classes.daily_events
