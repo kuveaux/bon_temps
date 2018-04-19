@@ -47,7 +47,7 @@ h2 {
     margin-top: 10px;
 }
 .events-list {
-    overflow-y: auto;
+    overflow-y: scroll;
     margin: 5px; 
     margin-bottom: 25px;
     font-family: 'Karla', sans-serif;
