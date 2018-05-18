@@ -7,7 +7,7 @@ from flask import (
     jsonify,
     request,
     redirect)
-import config
+from config import passthing, user
 # flask setup
 app = Flask(__name__)
 # database setup
